@@ -17,6 +17,11 @@ let main = async function () {
     let filenameNoExt = path.parse(filename).name
     let ext = path.extname(filename)
 
+    if (ext === '.png') {
+      console.log(`Skipping ${file} as it is already a PNG`)
+      continue
+    }
+
     await ShellExec(`cp "${file}" /tmp/input.${ext}`)
     file = `/tmp/input.${ext}`
 
