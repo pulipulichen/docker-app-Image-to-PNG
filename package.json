@@ -6,8 +6,8 @@
   "scripts": {
     "start": "docker-compose up --build",
     "commit-docker-image": "sudo docker compose build; bash ./docker-build/image/commit-docker-image.sh",
-    "d0.build": "docker compose build",
-    "d1.bash": "docker compose run app bash",
+    "d0.build": "sudo docker compose build",
+    "d1.bash": "sudo docker compose run app bash",
     "update": "node update.js"
   },
   "repository": {
